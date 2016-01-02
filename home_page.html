@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>David's Calculator</title>
+	<link rel="stylesheet" href="home_page.css" />
+</head>
+	<body>
+		<table>
+			<tbody>
+				<h1 style="width:auto; height:auto; text-align:left; color:white; font-size:200%; font-family:impact, charcoal, sans-serif; background-color:black; padding-left:3px;">David's Calculator
+					<ul id="taskbar">
+						<li><a href="home_page.html">Home</a></li>
+						<li><a href="share_page.html">Share</a></li>
+						<li><a href="about_page.html">About</a></li>
+					</ul>
+				</h1>
+			</tbody>
+		</table>
+
+		
+
+		<div class="logoHolder">
+			<img id="pclogo" src="PCLogo.jpg" alt="Pace Calculator">
+		</div>
+			<!--[if IE 8]>
+			...download nasty virus...
+			<![endif]-->
+
+		<table id="table_calculator" align="center">
+			<caption style="font-size: 300%;">Pace Calculator</caption>
+			<tr id="calculator_row_one">
+				<th>Distance</th>
+				<th>Time</th>
+				<th>Pace</th>
+			</tr>
+			<tr id="calculator_row_two">
+				<th>
+					<form>
+						<input id="distance_box" type="text" name="distance"><label for="distance_box">miles</label>
+					</form>
+				</th>
+				<th>
+					<form>
+						<table id="time_table">
+							<tr>
+								<th><input id="hours" type="text" name="hours"></th>
+								<th><input id="minutes" type="text" name="minutes"></th>
+								<th><input id="seconds" type="text" name="seconds"></th>
+							</tr>
+							<tr>
+								<th>hrs</th>
+								<th>min</th>
+								<th>sec</th>
+							</tr>
+						</table>
+						
+					</form>
+				</th>
+				<th>
+					<form>
+						<input id="pace_box" type="text" name="pace"><label for="pace_box">min/mi</label>
+					</form>
+				</th>
+			</tr>
+		</table>
+			<script src="calculator.js"></script>
+		<div class="buttonHolder">
+				<button id="go_button" onclick="calculate()">Go!</button>
+		</div>
+		<p id="note">Note: All paces will be in minutes per mile.</p>
+	</body>
+</html>

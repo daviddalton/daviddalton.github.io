@@ -1,0 +1,73 @@
+body {
+	background-color:white;
+}
+
+img#pclogo  {
+	padding-bottom: 30px;
+}
+
+table#table_calculator {
+	width: 25%;
+	background-color: #f1f1c1;
+	padding-top: 50px
+}
+
+table#table_calculator, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 15px;
+}
+
+tr#calculator_row_one {
+	font-size: 145%;
+	font-weight: bold;
+}
+
+#go_button  {
+	width: 60px;	
+}
+
+.buttonHolder  {
+	margin:auto 0;
+ 	text-align:center;
+}
+
+.logoHolder  {
+	text-align: center;
+}
+
+ul#taskbar li a:hover {
+    background-color: blue;
+}
+
+ul#taskbar li a {
+    background-color: white;
+    color: black;
+    padding: 0px 3px;
+    text-decoration: none;
+    border-radius: 3px 3px 0 0;
+}
+
+ul#taskbar {
+    padding: 0;
+    text-align: right;
+}
+
+ul#taskbar li {
+    display: inline;
+    font-size: 50%;
+    padding-right: 3px;
+}
+
+#go_button  {
+	padding-top: 3px;
+}
+
+p#note {
+	font-size: 25%;
+	text-align: center;
+}
+
+table#time_table  {
+	border-collapse: collapse;
+}
