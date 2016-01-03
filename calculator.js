@@ -27,3 +27,15 @@ function pad(num) {
 
     return decimal;
 }
+
+function checkDistance(distance) {
+    if (field.value == '') {
+        alert("Distance field is empty");
+    }
+}
+
+function checkTime(hours, minutes, seconds) {
+    if (field.value < '0') {
+        alert("The time can not be negative");
+    }
+}
