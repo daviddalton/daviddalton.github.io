@@ -1,5 +1,4 @@
-function calculate() {
-        var distance = document.getElementById("distance_box").value;
+function calculate(distance) {
         var hours = document.getElementById("hours").value;
         var minutes = document.getElementById("minutes").value;
         var seconds = document.getElementById("seconds").value;
@@ -28,14 +27,41 @@ function pad(num) {
     return decimal;
 }
 
-function checkDistance(distance) {
-    if (field.value == '') {
+function verifyAndCalculate() {
+    var hours = document.getElementById("hours").value;
+    var minutes = document.getElementById("minutes").value;
+    var seconds = document.getElementById("seconds").value;
+    var distance = document.getElementById("distance_box").value;
+    if (distance == '') {
         alert("Distance field is empty");
+    } 
+        else {
+            calculate(distance);
     }
+    if (distance < "0") {
+        alert("Distance can't be negative");
+    } 
+        else {
+            calculate(distance);
+    }
+    if (hours < "0") {
+        alert("Hours can't be negative");
+    } 
+        else {
+            calculate(distance);
+    }
+    if (minutes < "0") {
+        alert("Minutes can't be negative");
+    } 
+        else {
+            calculate(distance);
+    }
+    if (seconds < "0") {
+        alert("Seconds can't be negative");
+    } 
+        else {
+            calculate(distance);
+    }
+    
 }
 
-function checkTime(hours, minutes, seconds) {
-    if (field.value < '0') {
-        alert("The time can not be negative");
-    }
-}
