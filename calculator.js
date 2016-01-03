@@ -38,6 +38,7 @@ function verifyAndCalculate() {
         else {
             calculate(distance);
     }
+
     /*if (distance < "0") {
         alert("Distance can't be negative");
     } 
