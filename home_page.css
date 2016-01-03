@@ -1,26 +1,9 @@
 body {
-	background-color:white;
+	background-color: white;
 }
 
 img#pclogo  {
 	padding-bottom: 30px;
-}
-
-table#table_calculator {
-	width: 25%;
-	background-color: #f1f1c1;
-	padding-top: 50px
-}
-
-table#table_calculator, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-	padding: 15px;
-}
-
-tr#calculator_row_one {
-	font-size: 145%;
-	font-weight: bold;
 }
 
 #go_button  {
