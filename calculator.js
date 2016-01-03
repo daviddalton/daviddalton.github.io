@@ -61,7 +61,7 @@ function verifyAndCalculate() {
     } 
         else {
             calculate(distance);
-    }
+    }*/
     
 }
 
