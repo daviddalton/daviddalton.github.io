@@ -32,37 +32,58 @@ function verifyAndCalculate() {
     var minutes = document.getElementById("minutes").value;
     var seconds = document.getElementById("seconds").value;
     var distance = document.getElementById("distance_box").value;
-    if (distance == '') {
-        alert("Distance field is empty");
+    var pattNegative = new RegExp("-");
+    var pattLetters = new RegExp("[a-zA-Z]*");
+    var negHours = pattNegative.test(hours);
+    var negMinutes = pattNegative.test(minutes);
+    var negSeconds = pattNegative.test(minutes);
+    var negDistance = pattNegative.test(distance);
+    var lettHours = pattLetters.test(hours);
+    var lettMinutes = pattLetters.test(minutes);
+    var lettSeconds = pattLetters.test(seconds);
+    var lettDistance = pattLetters.test(distance);
+    
+    if (distance == '' || distance == "0") {
+        alert("Distance can not be empty or 0");
     } 
-        else {
-            calculate(distance);
+    else if (negDistance == true) {
+        alert("Distance can not be negative");
     }
 
-    /*if (distance < "0") {
-        alert("Distance can't be negative");
-    } 
-        else {
-            calculate(distance);
+    else if (negHours == true) {
+        alert("Hours can not be negative");
     }
-    if (hours < "0") {
-        alert("Hours can't be negative");
-    } 
-        else {
-            calculate(distance);
+
+    else if (negMinutes == true) {
+        alert("Minutes can not be negative");
     }
-    if (minutes < "0") {
-        alert("Minutes can't be negative");
+
+    else if (negSeconds == true) {
+        alert("Seconds can not be negative");
+
     } 
-        else {
-            calculate(distance);
+    else if (lettHours == true) {
+        alert("Numbers only please");
+    } 
+
+    else if (lettMinutes == true) {
+        alert("Numbers only please");
+    } 
+
+    else if (lettSeconds == true) {
+        alert("Numbers only please");
+    } 
+
+    else if (lettDistance == true) {
+        alert("Numbers only please");
+    } 
+
+    else {
+        calculate(distance);
     }
-    if (seconds < "0") {
-        alert("Seconds can't be negative");
-    } 
-        else {
-            calculate(distance);
-    }*/
-    
 }
+
+
+
+
 

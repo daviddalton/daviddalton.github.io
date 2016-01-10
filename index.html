@@ -3,6 +3,7 @@
 <head>
 	<title>Calculate My Pace</title>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="bootstrap-theme.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<meta charset="utf-8">
@@ -39,7 +40,6 @@
 		</div>
 	</nav>
 
-
 				<div class="container" style="padding-bottom:50px;">
 					<div class="jumbotron">
   						<h1>Welcome!</h1>
@@ -49,7 +49,7 @@
 				</div>
 
 
-	<div class="container">
+	<div id="mile_calculator" class="container">
 		<table class="table table-inverse" id="table_calculator">
 			<thead>
 				<tr id="calculator_row_one">
@@ -101,18 +101,20 @@
 
 			<script src="calculator.js"></script>
 
-			<div class="buttonHolder">
-				<button type="button" id="calculate" style="float:center" class="btn btn-primary btn-lg btn-block" onclick="verifyAndCalculate();">Calculate!</button>
+			<div id="calculate_button" class="buttonHolder" style="padding-bottom:100px">
+				<button type="button" id="calculate" class="btn btn-primary btn-lg btn-block" onclick="verifyAndCalculate();">Calculate!</button>
 			</div>
 
 			<!-- 
 				Calculate different distances based off the pace that was given!
 			-->
 
-			<footer>
-				<div style="position: relative; bottom: 5px; padding-top:100px">
-				Calculate My Pace © 2016
-				</div>
-			</footer>
+			<table border="0" cellpadding="0" cellspacing="0" style="width:100%;max-width:auto;margin:0 auto;" class="container">
+                <tr>
+                <td style="text-align: center; vertical-align: top; background-color:#f2f2f4;color:#c0c0c8;font-size:12px;padding-top:16px;font-family:Helvetica,Arial,sans-serif;line-height:22px;padding-bottom:3px;"><span class="appleFooter">Calculate My Pace © 2016</span><br/>
+<a href="index.html" style="color:#c0c0c8;text-decoration:none;">Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="share_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">Share</a>
+                </td>
+                </tr>
+                </table>
 </body>
 </html>
