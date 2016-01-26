@@ -62,7 +62,7 @@ function verifyAndCalculate() {
         alert("Seconds can not be negative");
 
     } 
-    else if (lettHours == true) {
+    /*else if (lettHours == true) {
         alert("Numbers only please");
     } 
 
@@ -76,7 +76,7 @@ function verifyAndCalculate() {
 
     else if (lettDistance == true) {
         alert("Numbers only please");
-    } 
+    } */
 
     else {
         calculate(distance);
