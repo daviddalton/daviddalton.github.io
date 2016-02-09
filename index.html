@@ -11,7 +11,16 @@
 	<link rel="icon" type="image/ico" href="favicon.ico"/>
 </head>
 <body>
-<?php include_once("analyticstracking.php") ?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71920534-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -104,6 +113,16 @@
 
 			<div id="calculate_button" class="buttonHolder" style="padding-bottom:100px">
 				<button type="button" id="calculate" class="btn btn-primary btn-lg btn-block" onclick="verifyAndCalculate();">Calculate!</button>
+			</div>
+
+			<div class="well">
+
+			<h4>If you keep that pace up you can run:</h4>
+
+			
+
+
+
 			</div>
 
 			<!-- 
