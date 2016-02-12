@@ -83,6 +83,14 @@ function verifyAndCalculate() {
     }
 }
 
+function Clear() {    
+   document.getElementById("distance_box").value= "";
+   document.getElementById("minutes").value= "";
+   document.getElementById("seconds").value= "";
+   document.getElementById("hours").value= "";
+   document.getElementById("pace_box").value="";
+}
+
 
 
 
