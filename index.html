@@ -74,7 +74,7 @@
 					<th>
 						<div class="col-sm-7">
 							<form>
-								<input id="distance_box" type="text" class="form-control" name="distance"><label for="distance_box">miles</label>
+								<input id="distance_box" type="text" class="form-control" name="distance" oninput="buttonColor()"><label for="distance_box">miles</label>
 							</form>
 						</div>
 					</th>
@@ -84,16 +84,16 @@
 								<tr>
 									<th>
 										<div class="col-sm-7">
-											<input id="hours" type="text" name="hours" class="form-control"><label for="hours">hrs</label>
+											<input id="hours" type="text" name="hours" class="form-control" oninput="buttonColor();"><label for="hours">hrs</label>
 										</div>
 									</th>
 									<th>
 										<div class="col-sm-7">
-											<input id="minutes" type="text" name="minutes" class="form-control"><label for="minutes">min</label>
+											<input id="minutes" type="text" name="minutes" class="form-control" oninput="buttonColor();"><label for="minutes">min</label>
 										</div></th>
 										<th>
 											<div class="col-sm-7">
-												<input id="seconds" type="text" name="seconds" class="form-control"><label for="seconds">sec</label>
+												<input id="seconds" type="text" name="seconds" class="form-control" oninput="buttonColor();"><label for="seconds">sec</label>
 											</div></th>
 										</tr>
 									</table>	
@@ -101,7 +101,7 @@
 							</th>
 							<th>
 								<div class="col-sm-7">
-									<input id="pace_box" type="text" class="form-control" name="pace"><label for="pace_box">min/mi</label>
+									<input id="pace_box" type="text" class="form-control" name="pace" oninput="buttonColor();"><label for="pace_box">min/mi</label>
 								</div>
 							</th>
 						</tr>
@@ -115,7 +115,7 @@
 				<button type="button" id="calculate" class="btn btn-primary btn-lg btn-block" onclick="verifyAndCalculate();">Calculate!</button>
 			</div>
 			<div id="clear_button" class="buttonHolder" style="padding-bottom:100px">
-				<button type="button" id="clear" class="btn btn-danger btn-lg btn-block" onclick="Clear();">Clear</button>
+				<button type="button" id="clear" class="btn btn-danger btn-lg btn-block" onclick="Clear();" disabled>Clear</button>
 			</div>
 
 			<div class="well">

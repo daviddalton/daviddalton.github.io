@@ -33,7 +33,7 @@ function verifyAndCalculate() {
     var seconds = document.getElementById("seconds").value;
     var distance = document.getElementById("distance_box").value;
     var pattNegative = new RegExp("-");
-    var pattLetters = new RegExp("[a-zA-Z]*");
+    var pattLetters = new RegExp("[a-zA-Z]+");
     var negHours = pattNegative.test(hours);
     var negMinutes = pattNegative.test(minutes);
     var negSeconds = pattNegative.test(minutes);
@@ -62,7 +62,7 @@ function verifyAndCalculate() {
         alert("Seconds can not be negative");
 
     } 
-    /*else if (lettHours == true) {
+    else if (lettHours == true) {
         alert("Numbers only please");
     } 
 
@@ -76,7 +76,7 @@ function verifyAndCalculate() {
 
     else if (lettDistance == true) {
         alert("Numbers only please");
-    } */
+    }
 
     else {
         calculate(distance);
@@ -89,7 +89,40 @@ function Clear() {
    document.getElementById("seconds").value= "";
    document.getElementById("hours").value= "";
    document.getElementById("pace_box").value="";
+
+   document.getElementById('clear').disabled = true;
 }
+
+function buttonColor() {
+    document.getElementById('clear').disabled = false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
