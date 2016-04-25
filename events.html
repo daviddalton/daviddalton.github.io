@@ -9,9 +9,20 @@
       #map {
         width: 800px;
         height: 600px;
-
-
       } 
+
+      #filter {
+        padding-left: 45px;
+      }
+
+      #filterButton {
+        width: 10%;
+
+      }
+
+      #buttonDiv {
+        padding-left: 45px;
+      }
     </style>
 
 <script>
@@ -106,19 +117,69 @@ function clearMarkers() {
 
 </script>
 </head>
+
+
+
+
+
+
 <body>
 
-        <div id="map"></div>
+<nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="events.html">NYC Events</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">
+                            <img src="ic_home_white_24dp_1x.png" alt="Home" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about_page.html">
+                            <img src="ic_account_box_white_24dp_1x.png" alt="About">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="share_page.html">
+                            <img src="ic_share_white_24dp_1x.png" alt="Share">
+                        </a>
+                    </li> 
+                    <li class="active">
+                        <a href="events.html">NYC Events</a>
+                    </li>  
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="well">
+
+<div class="well" id="map"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
 
-        <form id="filter">
-                <input id="movies" type="checkbox" name="" value="">Movies<br>
-                <input id="notMovies" type="checkbox" name="" value="" checked="">Not Movies<br>
-        </form>
+</div>
 
-        <button onclick="submitButton()">Click me</button>
+<div class="jumbotron">
+    <form id="filter">
+        <input id="movies" type="checkbox" name="" value="">Movies<br>
+        <input id="notMovies" type="checkbox" name="" value="" checked="">Not Movies<br>
+    </form>
+<br>
+<br>
+        <div id="buttonDiv">
+            <button id="filterButton" onclick="submitButton()">Filter</button>
+        </div>
+</div>
+
+
+        
 
 <script>
       $(document).ready(function() {
