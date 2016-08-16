@@ -5,9 +5,14 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/ico" href="favicon.ico"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue_grey-green.min.css" />
+	<script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+	<link rel="icon" type="image/ico" href="favicon.ico"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 	<body>
@@ -21,43 +26,34 @@
   ga('send', 'pageview');
 
 </script>
-		<nav class="navbar navbar-inverse">
-  			<div class="container-fluid">
-    			<div class="navbar-header">
-      				<a class="navbar-brand" href="index.html">Calculate My Pace</a>
-    			</div>
-    				<div>
-				<ul class="nav navbar-nav">
-					<li>
-						<a href="index.html">
-							<img src="ic_home_white_24dp_1x.png" alt="Home" />
-						</a>
-					</li>
-
-					<li>
-						<a href="about_page.html">
-							<img src="ic_account_box_white_24dp_1x.png" alt="About">
-						</a>
-					</li>
-
-					<li class="active">
-						<a href="share_page.html">
-							<img src="ic_share_white_24dp_1x.png" alt="Share">
-						</a>
-					</li> 
-					<li>
-						<a href="events.html">NYC Events</a>
-					</li>  
-				</ul>
-			</div>
-  			</div>
-		</nav>
-
-		<h1>Why share and how?</h1>
-		<p>We need you to get the word out that there is a new calculator in town. Simply go to twitter and facebook and talk about us. Take 30 seconds and share the love!</p>
-
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Calculate My Pace</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="index.html">Pace</a>
+        <a class="mdl-navigation__link" href="about_page.html">About</a>
+        <a class="mdl-navigation__link" href="share_page.html">Share</a>
+        <a class="mdl-navigation__link" href="events.html">NYC Events</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Calculate My Pace</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="index.html">Pace</a>
+      <a class="mdl-navigation__link" href="about_page.html">About</a>
+      <a class="mdl-navigation__link" href="share_page.html">Share</a>
+      <a class="mdl-navigation__link" href="events.html">NYC Events</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
 		  	</tbody>
-
 		  		<table width="auto" align="center" cellpadding="0" cellspacing="0" border="0">
 					<tr>
 						<td>
@@ -114,7 +110,7 @@
 																											<img src="https://clustertruck-prd.s3.amazonaws.com/assets/c221860a-aff9-11e5-b313-277459422f4f_twitter-xxl.original.png?1451592294" style="width: 33px !important; height: 31px; color="000000" !important;" width="33" height="31" border=“0”> 
 																										</td>
 																										<td style="padding-top: 8px; padding-bottom: 8px; margin: 0px; color: #ffffff; font-size: 0px; font-family: ClanNews, HelveticaRegular, Arial, sans-serif; text-transform: uppercase; background-color: #55acee; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-right-radius: 4px; -moz-border-radius-topright: 4px; -moz-border-radius-bottomright: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px;" align="center" class="social2">
-																											<a href="https://twitter.com/" target="_blank" style="color: #ffffff; font-size: 13px; font-family: ClanNews, HelveticaRegular, Arial, sans-serif; text-transform: uppercase; border-width: 8px 10px; border-style: solid; border-color: #55acee; display: block; text-decoration: none; background-color: #55acee;">
+																											<a href="https://twitter.com/daltonapps" target="_blank" style="color: #ffffff; font-size: 13px; font-family: ClanNews, HelveticaRegular, Arial, sans-serif; text-transform: uppercase; border-width: 8px 10px; border-style: solid; border-color: #55acee; display: block; text-decoration: none; background-color: #55acee;">
 																												Tweet It
 																											</a>
 																										</td>
@@ -170,17 +166,20 @@
 							</td>
 						</tr>
 					</table>
-
-
-<table border="0" cellpadding="0" cellspacing="0" style="width:100%;max-width:auto;margin:0 auto;" class="container">
-                <tr>
-                <td style="text-align: center; vertical-align: top; background-color:#f2f2f4;color:#c0c0c8;font-size:12px;padding-top:16px;font-family:Helvetica,Arial,sans-serif;line-height:22px;padding-bottom:3px;"><span class="appleFooter">Calculate My Pace © 2016</span><br/>
-					<a href="index.html" style="color:#c0c0c8;text-decoration:none;">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="about_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="share_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">Top</a>
-                </td>
-                </tr>
-                </table>
-
+				<table border="0" cellpadding="0" cellspacing="0" style="width:100%;max-width:auto;margin:0 auto;" class="container">
+                	<tr>
+                		<td style="text-align: center; vertical-align: top; background-color:#f2f2f4;color:#c0c0c8;font-size:12px;padding-top:16px;font-family:Helvetica,Arial,sans-serif;line-height:22px;padding-bottom:3px;">
+                			<span class="appleFooter">Calculate My Pace © 2016</span>
+                			<br/>
+							<a href="index.html" style="color:#c0c0c8;text-decoration:none;">Home</a>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="about_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">About</a>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="share_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">Top</a>
+                		</td>
+                	</tr>
+       			</table>
+           </div>
+        </main>
 	</body>
-	</html>
+</html>

@@ -2,13 +2,14 @@
 <html lang="en-US">
 <head>
 	<title>Calculate My Pace</title>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
-	<link rel="stylesheet" type="text/css" href="bootstrap-theme.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue_grey-green.min.css" />
+	<script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
 	<link rel="icon" type="image/ico" href="favicon.ico"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="calculator.js"></script>
 </head>
 <body>
 <script>
@@ -21,122 +22,106 @@
   ga('send', 'pageview');
 
 </script>
-	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html">Calculate My Pace</a>
-			</div>
-			<div>
-				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="index.html">
-							<img src="ic_home_white_24dp_1x.png" alt="Home" />
-						</a>
-					</li>
-
-					<li>
-						<a href="about_page.html">
-							<img src="ic_account_box_white_24dp_1x.png" alt="About">
-						</a>
-					</li>
-
-					<li>
-						<a href="share_page.html">
-							<img src="ic_share_white_24dp_1x.png" alt="Share">
-						</a>
-					</li> 
-					<li>
-						<a href="events.html">NYC Events</a>
-					</li> 
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-				<div class="container" style="padding-bottom:50px;">
-					<div class="jumbotron">
-  						<h1>Welcome!</h1>
-  						<p>We are so glad to have you here on the worlds easiest pace calculator.</p> 
-  						<p>Insert your distance and then enter the time it took you. Click Calculate! and find out how fast you went!</p>
-  					</div>           
-				</div>
-
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Calculate My Pace</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="index.html">Pace</a>
+        <a class="mdl-navigation__link" href="about_page.html">About</a>
+        <a class="mdl-navigation__link" href="share_page.html">Share</a>
+        <a class="mdl-navigation__link" href="events.html">NYC Events</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Calculate My Pace</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="index.html">Pace</a>
+      <a class="mdl-navigation__link" href="about_page.html">About</a>
+      <a class="mdl-navigation__link" href="share_page.html">Share</a>
+      <a class="mdl-navigation__link" href="events.html">NYC Events</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
 
 	<div id="mile_calculator" class="container">
 		<table class="table table-inverse" id="table_calculator">
-			<thead>
-				<tr id="calculator_row_one">
-					<th>Distance</th>
-					<th>Time</th>
-					<th>Pace</th>
-				</tr>
-			</thead>
-
 			<tbody>
 				<tr id="calculator_row_two">
 					<th>
-						<div class="col-sm-7">
-							<form>
-								<input id="distance_box" type="text" class="form-control" name="distance" oninput="buttonColor()"><label for="distance_box">miles</label>
-							</form>
-						</div>
+						<form action="#">
+  							<div class="mdl-textfield mdl-js-textfield">
+    							<input oninput="buttonColor()" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="distance_box">
+    							<label id="distance_label" class="mdl-textfield__label" for="distance_box">miles</label>
+    							<span class="mdl-textfield__error">Input is not a number!</span>
+  							</div>
+						</form>
 					</th>
+					<tr>
 					<th>
 						<form>
 							<table id="time_table">
 								<tr>
 									<th>
-										<div class="col-sm-7">
-											<input id="hours" type="text" name="hours" class="form-control" oninput="buttonColor();"><label for="hours">hrs</label>
-										</div>
+										<div class="mdl-textfield mdl-js-textfield">
+    										<input oninput="buttonColor()" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="hours">
+    										<label id="hours_label" class="mdl-textfield__label" for="hours">hours</label>
+    										<span class="mdl-textfield__error">Input is not a number!</span>
+  										</div>
 									</th>
 									<th>
-										<div class="col-sm-7">
-											<input id="minutes" type="text" name="minutes" class="form-control" oninput="buttonColor();"><label for="minutes">min</label>
-										</div></th>
-										<th>
-											<div class="col-sm-7">
-												<input id="seconds" type="text" name="seconds" class="form-control" oninput="buttonColor();"><label for="seconds">sec</label>
-											</div></th>
-										</tr>
-									</table>	
-								</form>
-							</th>
-							<th>
-								<div class="col-sm-7">
-									<input id="pace_box" type="text" class="form-control" name="pace" oninput="buttonColor();"><label for="pace_box">min/mi</label>
-								</div>
-							</th>
-						</tr>
-					</tbody>
-				</table>
+										<div class="mdl-textfield mdl-js-textfield">
+    										<input  oninput="buttonColor()" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="minutes">
+    										<label id="minutes_label" class="mdl-textfield__label" for="minutes">minutes</label>
+    										<span class="mdl-textfield__error">Input is not a number!</span>
+  										</div>
+									</th>
+									<th>
+										<div class="mdl-textfield mdl-js-textfield">
+    										<input  oninput="buttonColor()" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="seconds">
+    										<label id="secondsLabel" class="mdl-textfield__label" for="seconds">seconds</label>
+    										<span class="mdl-textfield__error">Input is not a number!</span>
+  										</div>
+									</th>
+								</tr>
+							</table>	
+						</form>
+					</th>
+					</tr>
+					<th>
+						<div class="mdl-textfield mdl-js-textfield">
+    						<input  oninput="buttonColor()" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="pace_box">
+    						<label id="pace_label" class="mdl-textfield__label" for="pace_box">pace</label>
+    						<span class="mdl-textfield__error">Input is not a number!</span>
+  						</div>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+			<div id="calculate_button" class="buttonHolder" style="padding-bottom:100px; padding-top:50px;">
+				<button type="button" id="calculate" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="verifyAndCalculate();">Calculate!</button>
+				<button type="button" id="clear" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" onclick="Clear();" disabled>Clear</button>
 			</div>
-
-			<script src="calculator.js"></script>
-
-			<div id="calculate_button" class="buttonHolder" style="padding-bottom:10px">
-				<button type="button" id="calculate" class="btn btn-primary btn-lg btn-block" onclick="verifyAndCalculate();">Calculate!</button>
-			</div>
-			<div id="clear_button" class="buttonHolder" style="padding-bottom:100px">
-				<button type="button" id="clear" class="btn btn-danger btn-lg btn-block" onclick="Clear();" disabled>Clear</button>
-			</div>
-
-			<div class="well">
-
-			<h4>If you keep that pace up you can run: FAST!</h4></br></br></br></br>
-			<p>Calculations coming soon...</p>
-			</div>
-
-			<!-- 
-				Calculate different distances based off the pace that was given!
-			-->
-
 			<table border="0" cellpadding="0" cellspacing="0" style="width:100%;max-width:auto;margin:0 auto;" class="container">
                 <tr>
-                <td style="text-align: center; vertical-align: top; background-color:#f2f2f4;color:#c0c0c8;font-size:12px;padding-top:16px;font-family:Helvetica,Arial,sans-serif;line-height:22px;padding-bottom:3px;"><span class="appleFooter">Calculate My Pace © 2016</span><br/>
-<a href="index.html" style="color:#c0c0c8;text-decoration:none;">Top</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="about_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="share_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">Share</a>
-                </td>
+                	<td style="text-align: center; vertical-align: top; background-color:#f2f2f4;color:#c0c0c8;font-size:12px;padding-top:16px;font-family:Helvetica,Arial,sans-serif;line-height:22px;padding-bottom:3px;"><span class="appleFooter">Calculate My Pace © 2016</span><br/>
+						<a href="index.html" style="color:#c0c0c8;text-decoration:none;">Top</a>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="about_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">About</a>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="share_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">Share</a>
+                	</td>
                 </tr>
-                </table>
+            </table>
+        </div>
+    </main>
+</div>
 </body>
 </html>
