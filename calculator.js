@@ -5,6 +5,7 @@ function calculate(distance) {
         var totalSeconds = (hours * 3600) + (minutes * 60) + +seconds;
         var paceInSeconds = totalSeconds/distance;
         var pace = paceInSeconds/60
+        document.getElementById("pace_label").innerHTML = "";
         document.getElementById("pace_box").value = (displayMin(pace) + ":" + displaySec(pace));
 }
 
@@ -83,12 +84,17 @@ function verifyAndCalculate() {
     }
 }
 
-function Clear() {    
+function Clear() {  
    document.getElementById("distance_box").value= "";
    document.getElementById("minutes").value= "";
    document.getElementById("seconds").value= "";
    document.getElementById("hours").value= "";
-   document.getElementById("pace_box").value="";
+   document.getElementById("pace_box").value="";  
+   document.getElementById("distance_label").innerHTML="miles";
+   document.getElementById("minutes_label").innerHTML="minutes";
+   document.getElementById("secondsLabel").innerHTML="seconds";
+   document.getElementById("hours_label").innerHTML="hours";
+   document.getElementById("pace_label").innerHTML="pace";
 
    document.getElementById('clear').disabled = true;
 }

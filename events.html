@@ -5,6 +5,13 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue_grey-green.min.css" />
+    <script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
       #map {
         width: 800px;
@@ -125,37 +132,33 @@ function clearMarkers() {
 
 <body>
 
-<nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="events.html">NYC Events</a>
-            </div>
-            <div>
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html">
-                            <img src="ic_home_white_24dp_1x.png" alt="Home" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="about_page.html">
-                            <img src="ic_account_box_white_24dp_1x.png" alt="About">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="share_page.html">
-                            <img src="ic_share_white_24dp_1x.png" alt="Share">
-                        </a>
-                    </li> 
-                    <li class="active">
-                        <a href="events.html">NYC Events</a>
-                    </li>  
-                </ul>
-            </div>
-        </div>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Calculate My Pace</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="index.html">Pace</a>
+        <a class="mdl-navigation__link" href="about_page.html">About</a>
+        <a class="mdl-navigation__link" href="share_page.html">Share</a>
+        <a class="mdl-navigation__link" href="events.html">NYC Events</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Calculate My Pace</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="index.html">Pace</a>
+      <a class="mdl-navigation__link" href="about_page.html">About</a>
+      <a class="mdl-navigation__link" href="share_page.html">Share</a>
+      <a class="mdl-navigation__link" href="events.html">NYC Events</a>
     </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
 
 <div class="well">
 
@@ -187,6 +190,8 @@ function clearMarkers() {
         });
 
 </script>
+</div>
+</main>
 
 </body>
 </html>
