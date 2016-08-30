@@ -62,21 +62,6 @@ function verifyAndCalculate() {
     else if (negSeconds == true) {
         alert("Seconds can not be negative");
 
-    } 
-    else if (lettHours == true) {
-        alert("Numbers only please");
-    } 
-
-    else if (lettMinutes == true) {
-        alert("Numbers only please");
-    } 
-
-    else if (lettSeconds == true) {
-        alert("Numbers only please");
-    } 
-
-    else if (lettDistance == true) {
-        alert("Numbers only please");
     }
 
     else {
@@ -85,10 +70,10 @@ function verifyAndCalculate() {
 }
 
 function Clear() {  
-   document.getElementById("distance_box").value= "";
-   document.getElementById("minutes").value= "";
-   document.getElementById("seconds").value= "";
-   document.getElementById("hours").value= "";
+   document.getElementById("distance_box").value="";
+   document.getElementById("minutes").value="";
+   document.getElementById("seconds").value="";
+   document.getElementById("hours").value="";
    document.getElementById("pace_box").value="";  
    document.getElementById("distance_label").innerHTML="miles";
    document.getElementById("minutes_label").innerHTML="minutes";
