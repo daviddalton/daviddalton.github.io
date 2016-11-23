@@ -36,6 +36,7 @@
         <a class="mdl-navigation__link" href="about_page.html">About</a>
         <a class="mdl-navigation__link" href="share_page.html">Share</a>
         <a class="mdl-navigation__link" href="events.html">NYC Events</a>
+        <a class="mdl-navigation__link" href="store.html">Store</a>
       </nav>
     </div>
   </header>
@@ -50,7 +51,7 @@
   </div>
   <main class="mdl-layout__content">
     <div class="page-content">
-
+<div class="inputs">
 	<div id="mile_calculator" class="inputBoxes">
 		<table class="table table-inverse" id="table_calculator">
 			<tbody>
@@ -74,7 +75,7 @@
     										<input oninput="buttonColor()" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="hours">
     										<label id="hours_label" class="mdl-textfield__label" for="hours">hours</label>
     										<span class="mdl-textfield__error">Input is not a number!</span>
-  										</div>
+  									</div>
 									</th>
 									<th>
 										<div class="mdl-textfield mdl-js-textfield">
@@ -106,6 +107,7 @@
 			</tbody>
 		</table>
 	</div>
+  </div>
 			<div id="calculate_button" class="buttonHolder" style="padding-bottom:100px; padding-top:50px;">
 				<button type="button" id="calculate" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="verifyAndCalculate();">Calculate!</button>
 				<button type="button" id="clear" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" onclick="Clear();" disabled>Clear</button>
@@ -113,18 +115,20 @@
         </div>
 </main>
     <footer>
-             <table border="0" cellpadding="0" cellspacing="0" style="width:100%;max-width:auto;margin:0 auto;" class="container">
-                        <tr>
-                          <td style="text-align: center; vertical-align: top; background-color:#f2f2f4;color:#c0c0c8;font-size:12px;padding-top:16px;font-family:Helvetica,Arial,sans-serif;line-height:22px;padding-bottom:3px;"><span class="appleFooter">Calculate My Pace © 2016</span><br/>
-                  <a href="index.html" style="color:#c0c0c8;text-decoration:none;">Top</a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="about_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">About</a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="share_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">Share</a>
-                          </td>
-                        </tr>
-            </table>
-        </footer>
+      <table border="0" cellpadding="0" cellspacing="0" style="width:100%;max-width:auto;margin:0 auto;" class="container">
+        <tr>
+          <td style="text-align: center; vertical-align: top; background-color:#f2f2f4;color:#c0c0c8;font-size:12px;padding-top:16px;font-family:Helvetica,Arial,sans-serif;line-height:22px;padding-bottom:3px;">
+            <span class="appleFooter">Calculate My Pace © 2016</span>
+            <br/>
+          <a href="index.html" style="color:#c0c0c8;text-decoration:none;">Home</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="about_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">About</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="share_page.html" target="_blank" style="text-decoration:none;color:#c0c0c8;">Top</a>
+          </td>
+        </tr>
+      </table>
+    </footer>
 </div>
 
 </body>

@@ -1,10 +1,8 @@
-.inputBoxes {
-	margin: auto;
-	width: 80%;
-	padding:10px;
-}
-
 .buttonHolder {
 	margin:auto;
 	width: 25%;
+}
+.inputs {
+	margin: 0 auto;
+	width: 80%;
 }
