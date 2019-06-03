@@ -71,15 +71,15 @@ function verifyAndCalculate() {
 
 function Clear() {  
    document.getElementById("distance_box").value="";
-   document.getElementById("minutes").value="";
-   document.getElementById("seconds").value="";
-   document.getElementById("hours").value="";
-   document.getElementById("pace_box").value="";  
-   document.getElementById("distance_label").innerHTML="miles";
-   document.getElementById("minutes_label").innerHTML="minutes";
-   document.getElementById("secondsLabel").innerHTML="seconds";
-   document.getElementById("hours_label").innerHTML="hours";
-   document.getElementById("pace_label").innerHTML="pace";
+   document.getElementById("minutes").value = "";
+   document.getElementById("seconds").value = "";
+   document.getElementById("hours").value = "";
+   document.getElementById("pace_box").value = "";  
+   // document.getElementById("distance_label").innerHTML = "miles";
+   // document.getElementById("minutes").innerHTML = "minutes";
+   // document.getElementById("seconds").innerHTML = "seconds";
+   // document.getElementById("hours").innerHTML = "hours";
+   // document.getElementById("pace_box").innerHTML = "pace";
 
    document.getElementById('clear').disabled = true;
 }
